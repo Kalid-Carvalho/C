@@ -49,7 +49,7 @@ int main()
         printf("Vetor [%d]: %d \n",i ,vetor[i]);
     }
 
-    //liberando memoria do vetor
+    //liberando memoria alocada na variavel vetor
     free(vetor);
     vetor = NULL;
     system("pause");
