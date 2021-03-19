@@ -1,6 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 //programa para alocar dinamicamente tamanhos em um vetor
 
+//função para alocar vetor
+int* alocaVetor(int tamanho){
+
+    int *aux;
+
+    aux = malloc (int*) (tamanho * sizeof(int));// função malloc retorna ponteiro
+
+    returnaux
+}
 
 int main(){
 
@@ -12,7 +23,7 @@ int main(){
     printf("Informe o tamanho do vetor");
         scanf("%d", tamanho);
     
-    alocaVetor();
+    vetor = alocaVetor(tamanho);
 
 
     system("pause");
