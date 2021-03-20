@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <string.h>
 
-//função para imprimir todas as estruturas de aluno
-void imprimiDados(aluno aluno_regular)
-{
-    printf("Código: %d \n", aluno_regular.codigo);
-    printf("Nome: %s \n", aluno_regular.nome);
-    printf("Nota: %.2f \n", aluno_regular.nota);
-}
+// criando variavel struct
+struct Aluno{
+    int codigo;
+    char nome[30];
+    float nota;
+};
 
 // programa que cria struct e aluno e funcao que imprime nome de aluno
 int main()
@@ -20,24 +20,20 @@ int main()
     // Define codificação como sendo UTF-8
     SetConsoleOutputCP(CPAGE_UTF8);
 
-    // criando variavel struct
-    struct aluno(
-        char nome[30];
-        int codigo;
-        float nota;
-    );
-
     //criando variavel struct dealuno
-    struct aluno aluno_especial;
+    struct Aluno aluno_especial;
 
     //inicializando valores de struct
-    aluno_especial.codigo = 1;
-    aluno_especial.nome = strcpy(aluno_especial.nome, "Kalid");
+    aluno_especial.codigo = 0;
+    strcpy(aluno_especial.nome, "Kalid");
     aluno_especial.nota = 10.00;
 
-    imprimiDados(aluno_especial);
+    //exibindo dados de uma struct
+    printf("Código: %d \n", aluno_especial.codigo);
+    printf("Nome: %s \n", aluno_especial.nome);
+    printf("Nota: %.2f \n", aluno_especial.nota);
 
-    system("\npause");
+    system("\n pause");
     // Retorna codificação padrão do Windows
     SetConsoleOutputCP(CPAGE_DEFAULT);
     return 0;
