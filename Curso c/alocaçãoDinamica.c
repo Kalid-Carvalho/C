@@ -28,17 +28,19 @@ int main(){
     //alocando dinamicamente na variavel vetor atraves da função aloca vetor
     vetor = alocaVetor(tamanho);
 
-    // declarando manualmente o vetor
-    vetor[0] = 10;
-    vetor[1] = 20;
-    vetor[2] = 30;
-    vetor[3] = 40;
+    // pegando valores de vetor apos definido o tamanho
+    for(i = 0 ; i < tamanho; i++){
+        printf("Informe a posição do %d vetor: ", i++)
+    }
 
     //imprimindo vetor
     for(i = 0; i < tamanho; i++){
         printf("Posição do vetor: %d \n", i);
         printf("Valor: $d \n", vetor[i]);
     }
+
+    free(vetor);
+    vetor = null;
 
     system("pause");
     return 0;
